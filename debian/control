@@ -1,0 +1,62 @@
+Source: qtgraphicaleffects-opensource-src
+Section: libs
+Priority: optional
+Maintainer: Deepin Developer <deepin-dev@deepin.org>
+Uploaders: Deepin Packages Builder <packages@deepin.org>
+Build-Depends: debhelper-compat (= 13),
+               dpkg-dev (>= 1.16.1),
+               pkg-kde-tools (>= 0.15.26~),
+               qml-module-qtquick-window2 (>= 5.15.3~),
+               qml-module-qtquick2 (>= 5.15.3~),
+               qtbase5-dev (>= 5.15.3~),
+               qtbase5-private-dev (>= 5.15.3~),
+               qtdeclarative5-dev-tools (>= 5.15.3~),
+               qtdeclarative5-private-dev (>= 5.15.3~)
+Build-Depends-Indep: qdoc-qt5 (>= 5.15.3~) <!nodoc>,
+                     qhelpgenerator-qt5 (>= 5.15.3~) <!nodoc>,
+                     qtattributionsscanner-qt5 (>= 5.15.3~) <!nodoc>,
+                     qtdeclarative5-doc-html (>= 5.15.3~) <!nodoc>
+Standards-Version: 4.6.0
+Homepage: https://doc.qt.io/qt-5/qtgraphicaleffects-index.html
+
+Package: qml-module-qtgraphicaleffects
+Architecture: any
+Multi-Arch: same
+Pre-Depends: dpkg (>= 1.15.6~), ${misc:Pre-Depends}
+Depends: qml-module-qtquick-window2,
+         qml-module-qtquick2,
+         ${misc:Depends},
+         ${qmlc:Depends},
+         ${shlibs:Depends}
+Description: Qt 5 Graphical Effects module
+ Qt is a cross-platform C++ application framework. Qt's primary feature
+ is its rich set of widgets that provide standard GUI functionality.
+ .
+ Qt Graphical Effects contains ready to use visual effects for OpenGL
+ QML applications.
+
+Package: qtgraphicaleffects5-doc
+Build-Profiles: <!nodoc>
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: Qt 5 graphical effects documentation
+ Qt is a cross-platform C++ application framework. Qt's primary feature
+ is its rich set of widgets that provide standard GUI functionality.
+ .
+ This package contains the documentation for the Qt 5 graphical effects
+ libraries.
+
+Package: qtgraphicaleffects5-doc-html
+Build-Profiles: <!nodoc>
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: Qt 5 graphicaleffects HTML documentation
+ Qt is a cross-platform C++ application framework. Qt's primary feature
+ is its rich set of widgets that provide standard GUI functionality.
+ .
+ This package contains the HTML documentation for the Qt 5 graphical effects
+ libraries.
